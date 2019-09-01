@@ -1,0 +1,32 @@
+Task 1:
+	Implementare:
+		Am folosit functiile fopen(), fscanf() si fgets().
+	Probleme:
+		Prezenta comentariilor in fisierele *.points a facut citirea ceva mai grea. Am rezolvat sarind peste cele 5 linii ce contin comentariile(o metoda cam neeleganta).
+
+Task 2:
+	Implementare:
+		Am generat centroizii initiali cu functia randperm(), iar apoi cat timp nu se indeplineste conditia de convergenta, se separa punctele in functie de centroizi si se recalculeaza centrul de greutate al centroizilor.
+	Probleme:
+		La conditia de convergenta conditia "(centroids - prevCentroids) != zeros(size(centroids))" nu este suficienta intrucat iese cand o linie (oricare linie) este nula. Am rezolvat aceasta aplicand conditia "norm(centroids - prevCentroids) != 0"
+
+Task 3:
+	Implementare:
+		Folosind functia rand() se genereaza NC culori, iar fiecare punct primeste culoarea asociata centroidului de care apartine. La sfarsit folosind functia scatter3() se afiseaza graficul.
+	Probleme:
+		Doi (sau mai multi) centroizi pot avea aceeasi culoare (folosindu-se functia rand()), insa acest caz este foarte rar.
+
+Task 4:
+	Implementare:
+		Se determina punctele ce apartin fiecarui centroid, iar apoi se calculeaza costul.
+	Probleme:
+		-
+
+Task 5:
+	Implementare:
+		Se citesc din fisier punctele apoi se calculeaza costul pentru i = 1 : 10 centroizi. La final se face graficul apeland functia plot().
+	Probleme:
+		Aceeasi problema ca la Task 1.
+
+Probleme generale:
+	La 100 de rulari ale testelor primite, Testul 1 pica de 0-2 ori.
